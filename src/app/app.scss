@@ -1,13 +1,132 @@
+$backgroundColor: #272727;
+$textColor: #fefae0;
+$accentColor: #86bbd8;
+$borderRadius:0.5rem;
+// #EF6F6C, #809BCE, #539987, #86BBD8, #EE6352, #028090, #90BEDE, #FF1053, #623CEA
+// #86BBD8, 90BEDE
+
+html,
 body {
-  background: black;
+  background: #272727;
+  // filter: blur(1);
+  // hide scrollbar
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 99vh;
 }
 
 h1 {
-  color:white;
+  font-size: 8rem;
+  margin-block: 1.5rem;
+  color: $textColor;
+  font-weight: 700;
+  text-align: center;
+}
+h2 {
+  font-size: 5rem;
+  text-align: center;
   font-weight: 100;
+  margin-block: 1.5rem;
+  color: $textColor;
+}
+h3 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+  margin-block: 1.5rem;
+  color: $accentColor;
+}
+h4 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 100;
+  margin-block: 1rem;
+  margin-bottom:2rem;
+  color: $textColor;
 }
 
-.container {
+.typing-cursor {
+  display: inline-block;
+  margin-left: 5px;
+  width: 2rem;
+  height: 1em;
+  background-color: rgb(255, 230, 0);
+  opacity: 0.8;
+  // animation: blink 1s step-start infinite;
+}
+.blinking {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.skills {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  // max-width:70vw;
+
+  .skill-container {
+    display: flex;
+    flex-direction: column;
+    color: $textColor;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .skill-logo {
+    // background:blue;
+    width: 5rem;
+    height: 5rem;
+    color: white;
+  }
+}
+
+.down-arrow {
+  width: 10rem;
+  height: 10rem;
+}
+
+.skill-link {
+  cursor: pointer;
+  user-select: none;
+}
+
+.skills-section {
+  position: relative;
+
+  .modal {
+    position: absolute;
+    top:25%;
+    // background:$textColor;
+    min-width:50vw;
+    min-height:50vh;
+    border-radius:$borderRadius;
+    z-index: 100;
+    border:5px solid $textColor;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  z-index: 10; /* Ensure it's above other content but below the modal */
 }

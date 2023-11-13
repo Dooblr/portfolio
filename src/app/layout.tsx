@@ -1,10 +1,9 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { Urbanist } from "next/font/google"
+import { Josefin_Sans } from "next/font/google"
 
-const urbanist = Urbanist({
+const josefin_sans = Josefin_Sans({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
 })
 
 export const metadata: Metadata = {
@@ -19,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={urbanist.className}>{children}</body>
+      <body className={josefin_sans.className}>{children}</body>
     </html>
   )
 }
