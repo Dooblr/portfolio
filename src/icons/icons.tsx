@@ -26,6 +26,7 @@ export function DownIcon() {
       whileInView={{ opacity: 1 }} // Triggers opacity animation when in view
       transition={arrowFadeInAnimation.transition} // Transition settings for the fade-in animation
     >
+      {/* <p className="scroll-text">Scroll</p> */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

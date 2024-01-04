@@ -1,5 +1,5 @@
 .down-icon {
-  position: absolute;
+  // position: absolute;
   width: 5rem;
   height: 5rem;
   position: absolute;
@@ -8,4 +8,10 @@
   top: 80%;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 3rem;
+    height: 3rem;
+    top:85%;
+  }
 }
