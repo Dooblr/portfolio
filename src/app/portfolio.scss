@@ -1,0 +1,35 @@
+@import 'styleVariables.scss';
+
+h2 {
+  font-size:5rem;
+}
+
+.portfolio-detail-text {
+  max-width: 35rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  margin-right:67%;
+  
+  .back-arrow-icon {
+    width:5rem;
+    height:5rem;
+    color:$textColor;
+    transition: 200ms;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.portfolio-item-image {
+  margin-bottom:2rem;
+  border-radius:$borderRadius;
+}

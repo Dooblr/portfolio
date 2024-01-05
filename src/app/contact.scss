@@ -1,0 +1,49 @@
+@import './styleVariables.scss';
+
+.field-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom:1rem;
+
+  label {
+    color:$textColor;
+    margin-bottom:.5rem;
+  }
+
+  input {
+    border-radius: $borderRadius;
+    font-size: 2rem;
+    padding-left:1rem;
+    padding-bottom: .5rem;
+    padding-top: .9rem;
+  }
+}
+
+#contact-submit {
+  width:100%;
+  background:rgb(6, 246, 130);
+  height:3rem;
+  margin-top:2.25rem;
+  border-radius: $borderRadius;
+  font-weight:700;
+  border:none;
+  font-size:1.5rem;
+  // color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    filter:brightness((1.2))
+  }
+
+  &:active {
+    filter:brightness((0.9))
+  }
+
+  p {
+    color:#121619; 
+    transform: translateY(.20rem);
+    user-select: none;
+  }
+}

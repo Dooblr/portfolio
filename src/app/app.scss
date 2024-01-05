@@ -1,14 +1,8 @@
-$backgroundColor: #272727;
-$textColor: #fefae0;
-$accentColor: #86bbd8;
-$borderRadius: 1rem;
-// #EF6F6C, #809BCE, #539987, #86BBD8, #EE6352, #028090, #90BEDE, #FF1053, #623CEA
-// #86BBD8, 90BEDE
+@import 'styleVariables.scss';
 
 html,
 body {
   background: #272727;
-  // filter: blur(1);
   // hide scrollbar
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -73,6 +67,11 @@ h4 {
 
 p {
   color: $textColor;
+  line-height: 2rem;
+}
+
+.flex {
+  display:flex;
 }
 
 .scroll-text {
@@ -106,10 +105,10 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width:67vw;
+  max-width: 67vw;
 
-  @media screen and (max-width:768px){
-    max-width:90vw;
+  @media screen and (max-width: 768px) {
+    max-width: 90vw;
   }
 
   .skill-container {
@@ -170,7 +169,6 @@ p {
   }
   p {
     font-size: 1.5rem;
-    line-height: 2rem;
     max-width: 50vw;
 
     @media screen and (max-width: 768px) {
@@ -201,27 +199,60 @@ p {
   .projects-item {
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 300px;
     height: 200px;
-    border: 1px solid $textColor;
+    // border: 1px solid $textColor;
     border-radius: $borderRadius;
     transition: 200ms;
     cursor: pointer;
+    overflow: hidden;
 
     &:hover {
       transform: scale(1.1);
     }
+    &:active {
+      transform: scale(0.9);
+    }
   }
 
-  .image-dummy {
+  .project-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    z-index: 1;
+    position: absolute;
+    border-radius: $borderRadius;
+  }
+
+  .project-label-spacer {
     flex-grow: 2;
   }
 
   p {
-    background:rgba(0,0,0,0.2);
-    padding:.75rem;
-    transform: translateY(29%);
+    background: rgba(0, 0, 0, 0.75);
+    padding: 0.75rem;
+    margin: 0;
+    height: 30px;
+    justify-self: flex-end;
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #bahp-image {
+    width: 67%;
+    padding: 8rem;
+    transform: translate(-16%, -40.5%);
+    background: $textColor;
+  }
+  .project-icon {
+    background: $textColor;
+    height: 80%;
+    padding:2rem;
+    transform: translate(-10%, -8%);
   }
 }
