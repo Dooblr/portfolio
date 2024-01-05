@@ -33,3 +33,25 @@ h2 {
   margin-bottom:2rem;
   border-radius:$borderRadius;
 }
+
+.return-button {
+  min-width:30rem;
+  background: rgb(6, 246, 130);
+  height: 3rem;
+  margin-bottom:2rem;
+  border-radius: $borderRadius;
+  font-weight: 100;
+  border: none;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    filter: brightness((1.2));
+  }
+
+  &:active {
+    filter: brightness((0.9));
+  }
+}

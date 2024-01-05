@@ -9,6 +9,7 @@ body {
   ::-webkit-scrollbar {
     display: none;
   }
+  font-family: 'Josefin Sans';
 }
 
 section {
@@ -68,6 +69,11 @@ h4 {
 p {
   color: $textColor;
   line-height: 2rem;
+}
+
+label {
+  color:$textColor;
+  font-size: 1.5rem;
 }
 
 .flex {

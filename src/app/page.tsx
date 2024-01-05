@@ -29,12 +29,9 @@ import { useWindowSize } from "@uidotdev/usehooks"
 import "../icons/icons.scss"
 import "./app.scss"
 import "./contact.scss"
-import { Josefin_Sans } from "next/font/google"
+import { josefin_sans } from "./fonts"
 
-export const josefin_sans = Josefin_Sans({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-})
+
 
 export default function Home() {
   const [typingHeader, setTypingHeader] = useState("")

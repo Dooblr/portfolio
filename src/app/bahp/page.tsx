@@ -6,6 +6,7 @@ import "../portfolio.scss"
 import Image from "next/image"
 
 import { IoArrowBack } from "react-icons/io5"
+import { josefin_sans } from "../fonts"
 
 export default function bahp() {
   const imageCount = 6 // Total number of images
@@ -16,7 +17,7 @@ export default function bahp() {
   }
 
   return (
-    <section>
+    <section className={josefin_sans.className}>
       <button
         className="back-button"
         onClick={() => {
@@ -61,6 +62,7 @@ export default function bahp() {
           className="portfolio-item-image"
         />
       ))}
+      <button className="return-button" onClick={()=>{history.back()}}>Return to portfolio</button>
     </section>
   )
 }
