@@ -8,12 +8,12 @@ import Image from "next/image"
 import { IoArrowBack } from "react-icons/io5"
 import { josefin_sans } from "../fonts"
 
-export default function bahp() {
-  const imageCount = 6 // Total number of images
+export default function ursabase() {
+  const imageCount = 7 // Total number of images
   const images = []
 
   for (let i = 1; i <= imageCount; i++) {
-    images.push(require(`../../assets/bahp/${i}.png`))
+    images.push(require(`../../assets/ursabase/${i}.png`))
   }
 
   return (
@@ -26,35 +26,30 @@ export default function bahp() {
       >
         <IoArrowBack className="back-arrow-icon" />
       </button>
-      <h2>
-        Bay Area Health Psychology <br /> Document Manager
-      </h2>
+      <h2>Ursabase</h2>
       <p className="portfolio-detail-text">
-        Bay Area Health Psychology is a psychiatric health firm based out of
-        Redwood City, CA. They came to me with this project in an attempt to
-        remove the need for paper forms, scanning, faxing, etc.
+        Ursabase is a custom-made landscaping machinery form manager for
+        a local business in Southern Oregon. The app was developed while working
+        closely with the owner and supervisor of the business to ensure it met all of
+        their needs for documenting issues, images, and parts requirements.
         <br />
         <br />
         Notable features include:
         <ul>
-          <li>Authorization with multiple user roles</li>
+          <li>Authorization</li>
           <li>Data storage and access</li>
-          <li>Periodic email and text reminders to clients and providers</li>
-          <li>Complex navigation routes</li>
           <li>Responsive design (works on mobile, tablet, and desktop)</li>
           <li>Complex forms</li>
-          <li>HIPAA Compliance and strict data protection</li>
         </ul>
         Technologies used:
         <ul>
           <li>React (with Vite bundler)</li>
           <li>
             Firebase (authorization, database, hosting, and serverless
-            functions)
+            functions including daily backups)
           </li>
-          <li>Mantine (UI elements)</li>
-          <li>React-Hook-Form (handles complex forms)</li>
-          <li>Tanstack Table (table display, sorting, and filtering)</li>
+          <li>ChakraUI (UI elements)</li>
+          <li>Formik (handles complex forms)</li>
         </ul>
       </p>
       {images.map((img, index) => (

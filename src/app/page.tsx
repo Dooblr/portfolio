@@ -31,8 +31,6 @@ import "./app.scss"
 import "./contact.scss"
 import { josefin_sans } from "./fonts"
 
-
-
 export default function Home() {
   const [typingHeader, setTypingHeader] = useState("")
   const [isTypingComplete, setIsTypingComplete] = useState(false) // State to track if typing is complete
@@ -188,6 +186,8 @@ export default function Home() {
           )}
         </div>
       </section>
+
+      {/* Projects ======================================================= */}
       <section className="projects-section">
         <h2>Projects</h2>
 
@@ -210,7 +210,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="projects-item">
+          <div
+            className="projects-item"
+            onClick={() => {
+              window.location.pathname = "/ursabase"
+            }}
+          >
             <FaPaw
               className="project-image project-icon"
               color="rgb(16, 191, 174)"
@@ -219,7 +224,12 @@ export default function Home() {
             <p>Ursabase</p>
           </div>
 
-          <div className="projects-item">
+          <div
+            className="projects-item"
+            onClick={() => {
+              window.location.pathname = "/discolist"
+            }}
+          >
             <TbVinyl className="project-image project-icon" color="black" />
             <div className="project-label-spacer"></div>
             <p>DiscoList</p>
