@@ -43,10 +43,13 @@ export default function discolist() {
       </p>
 
       <iframe
-        width="420"
-        height="315"
-        src="https://www.youtube.com/watch?v=grQ_ANiDf3Y"
-        style={{marginBottom:'2rem'}}
+        width={640}
+        height={480}
+        src={`https://www.youtube.com/embed/grQ_ANiDf3Y`}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        style={{marginBottom:'2rem', maxWidth:'100vw'}}
       ></iframe>
 
       <button

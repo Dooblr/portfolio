@@ -336,7 +336,7 @@ export default function Home() {
       <section>
         <h2>Contact</h2>
 
-        <form onSubmit={submitContactForm} id="contact-form">
+        <form onSubmit={submitContactForm} id="contact-form" style={{maxWidth:'90vw'}}>
           <div className="field-container">
             <label>Name</label>
             <input
